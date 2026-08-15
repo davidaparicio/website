@@ -19,18 +19,19 @@ jobs:
       name: production
       url: ${{ vars.SITE_URL }}
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
         with:
-          node-version: 22
-          cache: npm
+          submodules: true
+          fetch-depth: 0
 
-      - name: Install dependencies
-        run: npm ci
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.111.3' #'latest' #'0.88.0'
+          extended: true # need the Hugo extended version to build SCSS/SASS
 
       - name: Build
-        run: npm run build
+        run: hugo --cleanDestinationDir --minify
 
       - name: Configure SSH
         run: |
@@ -44,5 +45,5 @@ jobs:
         run: |
           rsync -avz --delete \
             -e "ssh -i ~/.ssh/id_ed25519 -p ${{ secrets.SSH_PORT }}" \
-            dist/ \
+            public/ \
             ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/david/
