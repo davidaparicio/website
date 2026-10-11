@@ -38,7 +38,7 @@ links:
 # - icon: binoculars
 #   icon_pack: fas
 #   name: Description
-#   url: https://www.telecom-valley.fr/conferences-azur-tech-winter-2025/#cybers%C3%A9curit%C3%A9
+#   url: https://m.devoxx.com/events/devoxxfr2026/talks/85089/scurisez-vos-prototypes-avec-oauth2proxy-et-anubis
 - icon: comments
   icon_pack: fas
   name: Feedback
@@ -50,7 +50,7 @@ links:
 url_code: ""
 url_pdf: ""
 url_slides: "talks/DevoxxFR2026_OAuth2Proxy.pdf"
-url_video: ""
+url_video: "https://youtu.be/Di_aoKNKSQQ"
 
 slides: ""
 projects: []
