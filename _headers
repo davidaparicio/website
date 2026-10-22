@@ -1,6 +1,5 @@
-# Netlify headers
-# Automatically generated
-# Documentation: http://bit.ly/netlify-deployment
+# Custom headers for GitLab Pages
+# Overrides Wowchemy default to add Cache-Control
 /*
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
@@ -13,3 +12,39 @@
   Content-Type: application/manifest+json
 /index.xml
   Content-Type: application/rss+xml
+# Cache-Control: HTML pages - short cache, always revalidate
+/*.html
+  Cache-Control: public, max-age=600, must-revalidate
+# Cache-Control: CSS & JS - long cache (fingerprinted by Hugo)
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+# Cache-Control: Fonts - long cache
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+/*.woff
+  Cache-Control: public, max-age=31536000, immutable
+# Cache-Control: Images - 1 week
+/*.jpg
+  Cache-Control: public, max-age=604800
+/*.jpeg
+  Cache-Control: public, max-age=604800
+/*.png
+  Cache-Control: public, max-age=604800
+/*.gif
+  Cache-Control: public, max-age=604800
+/*.svg
+  Cache-Control: public, max-age=604800
+/*.webp
+  Cache-Control: public, max-age=604800
+/*.ico
+  Cache-Control: public, max-age=604800
+# Cache-Control: PDFs - 1 week
+/*.pdf
+  Cache-Control: public, max-age=604800
+# Cache-Control: Feeds & JSON - short cache
+/*.json
+  Cache-Control: public, max-age=600, must-revalidate
+/*.xml
+  Cache-Control: public, max-age=600, must-revalidate
