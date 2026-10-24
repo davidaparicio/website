@@ -12,7 +12,7 @@ address:
   postcode: '34000'
   country: France
 
-summary: Let's simplify security for our developers
+summary: Security for "dummies"
 abstract: "In many companies, it is common to encounter internal applications that do not offer native user management. Leaving their security up to developers can prove to be complex and risky. This talk introduces OAuth2-Proxy, an open-source, cloud-native reverse proxy that acts as a universal shield in front of your applications, without modifying their code. With OAuth2-Proxy, you can delegate authentication to an external provider (Google, Azure, Keycloak, etc.), ensuring a secure and centralized connection for all your users. In just 10 minutes, explore how to quickly secure your applications, manage access via IdPs (identity providers), and simplify all authentication challenges—all with a live demo accessible to everyone, even without advanced application security skills. Finally, to prevent AI scraping, we’ll add protection using the open-source tool Anubis."
 
 date: "2026-06-06T08:30:00Z"
